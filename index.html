@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% assign pinned = site.posts | where: "pinned", true %}
+{% assign recent = site.posts | where_exp: "p", "p.pinned != true" %}
+
+{% if pinned.size > 0 %}
+<h2 class="section-label">Pinned</h2>
+<ul class="post-list">
+  {% for post in pinned %}{% include post-item.html post=post %}{% endfor %}
+</ul>
+{% endif %}
+
+<h2 class="section-label">Recent</h2>
+<ul class="post-list">
+  {% for post in recent %}{% include post-item.html post=post %}{% endfor %}
+</ul>

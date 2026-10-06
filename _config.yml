@@ -1,0 +1,10 @@
+title: Your Name
+description: Essays on philosophy, games, and life.
+url: "https://YOURUSERNAME.github.io"
+baseurl: ""
+# Color palette: paper | slate | moss  (change this one word to re-theme)
+palette: paper
+markdown: kramdown
+permalink: /:year/:month/:title/
+plugins:
+  - jekyll-feed

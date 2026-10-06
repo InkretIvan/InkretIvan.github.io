@@ -1,0 +1,7 @@
+<li class="post-item">
+  <a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>
+  <span class="meta">
+    <time>{{ include.post.date | date: "%b %-d, %Y" }}</time>
+    {% for t in include.post.tags %}<a class="tag" href="{{ '/topics/' | relative_url }}#{{ t | slugify }}">{{ t }}</a>{% endfor %}
+  </span>
+</li>
